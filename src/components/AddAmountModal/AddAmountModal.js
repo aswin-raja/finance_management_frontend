@@ -113,6 +113,7 @@ const AddAmountModal = ({ visible, onCancel, selectedRowId, fetchdata }) => {
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
+                onCancel();
               }}
             >
               Download Receipt

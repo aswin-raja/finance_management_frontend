@@ -135,7 +135,7 @@ const DataTable = (props) => {
 
     
       </Space>
-      <Table columns={columns} dataSource={props.data} />
+      <Table columns={columns} dataSource={props.data} pagination={true}/>
       <AddAmountModal
         visible={isModalVisible}
         onCancel={handleCancel}

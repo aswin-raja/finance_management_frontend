@@ -22,6 +22,41 @@ const MainLayout = ({ children }) => {
   return (
     <MainLayoutStyled>
       <Layout style={{ minHeight: "100vh" }}>
+        
+        <Header
+            style={{
+              padding: 0,
+              background: "#4682B4",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Button
+              type="text"
+              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+              onClick={() => setCollapsed(!collapsed)}
+              style={{
+                fontSize: "16px",
+                width: 64,
+                height: 64,
+              }}
+            />
+            <p
+              style={{
+                margin: 0,
+                fontSize: "35px",
+                fontWeight: 600,
+                color: "white",
+                textAlign: "center",
+                fontFamily: "Arial, sans-serif",
+              }}
+            >
+              FINANCE MANAGEMENT
+            </p>
+            <div></div>
+          </Header>
+        <Layout>
         <Sider
           trigger={null}
           collapsible
@@ -67,40 +102,6 @@ const MainLayout = ({ children }) => {
             </Menu.Item>
           </Menu>
         </Sider>
-        <Layout>
-          <Header
-            style={{
-              padding: 0,
-              background: "#4682B4",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <Button
-              type="text"
-              icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-              onClick={() => setCollapsed(!collapsed)}
-              style={{
-                fontSize: "16px",
-                width: 64,
-                height: 64,
-              }}
-            />
-            <p
-              style={{
-                margin: 0,
-                fontSize: "35px",
-                fontWeight: 600,
-                color: "white",
-                textAlign: "center",
-                fontFamily: "Arial, sans-serif",
-              }}
-            >
-              FINANCE MANAGEMENT
-            </p>
-            <div></div>
-          </Header>
           <Content
             style={{
               margin: "24px 16px",
