@@ -11,7 +11,7 @@ function LoginPage() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errormessage, setErrorMessage] = useState({});
+ 
   const [loginpopup, setLoginPopup] = useState(false);
 
   const LoginModalOpenHandler = () => {
@@ -81,7 +81,7 @@ function LoginPage() {
         <p className="sub-text">Login to Continue</p>
 
        
-          <label for="name">Username  {email && errormessage.email && <span className="errormessage">{errormessage.email}</span>}</label>
+          <label for="name">Username </label>
          
           <Input
             type="text"
@@ -96,7 +96,7 @@ function LoginPage() {
             onChange={handleEmailChange}
           />
  
-          <label for="password">Password {password && errormessage.password && <span className="errormessage">{errormessage.password}</span>}</label>
+          <label for="password">Password </label>
           <Input
             id="password"
             className="password-input"
